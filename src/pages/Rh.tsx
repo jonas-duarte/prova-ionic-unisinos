@@ -39,12 +39,12 @@ const Rh: React.FC = () => {
             await handleLogout()
             return
         }
-        await CurriculoStorage.novoCurriculo(form)
         if (curriculoFields.some(f => !form[f.name])) {
             __alert("informe todos campos obrigatorios", stateHandler)
             return
         }
         __alert("curriculo cadastrado", stateHandler)
+        await CurriculoStorage.novoCurriculo(form)
         setForm({})
     }
 

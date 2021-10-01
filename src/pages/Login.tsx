@@ -30,7 +30,7 @@ const Login: React.FC = () => {
           <IonInput value={usuario} placeholder="Usuário" onIonChange={e => setUsuario(e.detail.value!)} clearInput></IonInput>
         </IonItem>
         <IonItem>
-          <IonInput value={senha} placeholder="Senha" onIonChange={e => setSenha(e.detail.value!)} clearInput></IonInput>
+          <IonInput value={senha} placeholder="Senha" onIonChange={e => setSenha(e.detail.value!)} clearInput type="password"></IonInput>
         </IonItem>
         <IonButton color="light" onClick={() => handleLogin(usuario, senha)}>Login</IonButton>
       </IonContent>
